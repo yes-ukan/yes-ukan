@@ -145,31 +145,27 @@
                   <source src="video/teaser.mp4" type="video/mp4">
               </video> -->
 
-			        <br>
+
 
           <p class="text-left">
             U-Net has become a cornerstone in various visual applications such as image segmentation and diffusion probability models. 
-            <br>
-            <br>
+  
             While numerous innovative designs and improvements have been introduced by incorporating transformers or MLPs, the networks are still limited to linearly modeling patterns as well as the deficient interpretability. To address these challenges, our intuition is inspired by the impressive results of the Kolmogorov-Arnold Networks (KANs) in terms of
             accuracy and interpretability, which reshape the neural network learning via the
             stack of non-linear learnable activation functions derived from the Kolmogorov-
             Anold representation theorem. 
-            <br>
-            <br>
+           
             Specifically, in this paper, we explore the untapped
             potential of KANs in improving backbones for vision tasks. 
-            <br>
-            <br>
+            
             We investigate, modify and re-design the established U-Net pipeline by integrating the dedicated KAN
             layers on the tokenized intermediate representation, termed U-KAN. Rigorous medical image segmentation benchmarks verify the superiority of U-KAN by higher
             accuracy even with less computation cost. 
-            <br>
-            <br>
+           
+           
             We further delved into the potential of U-KAN as an alternative U-Net noise predictor in diffusion models, demonstrating
             its applicability in generating task-oriented model architectures. 
-            <br>
-            <br>
+           
             These endeavours unveil valuable insights and sheds light on the prospect that with U-KAN, you can
             make strong backbone for medical image segmentation and generation.
           
@@ -185,6 +181,53 @@
     </div>
   </section>
   <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Highlight</h3>
+            <hr style="margin-top:0px">
+            <!-- <h6 style="color:#8899a5">  -->
+              <!-- SyncDreamer is able to directly generate multiview consistent images, which allows 3D reconstruction by NeuS or NeRF without SDS loss.  -->
+              <!-- TL;DR:<i>Endora</i> enables the <b>high-fidelity medical video generation</b> on endoscopy scenes and demonstrates the <b>versatile ability through successful applications</b> in video-based disease diagnosis and 3D surgical scene reconstruction. -->
+            <!-- </h6> -->
+
+              <!-- <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                  <source src="video/teaser.mp4" type="video/mp4">
+              </video> -->
+
+          <p class="text-left">
+            <ul style="list-style-position: inside; text-align: left; margin-left: 0x;">
+              <li>We present the first effort to incorporate the advantage of emerging KANs to improve established U-Net pipeline to be more accurate, efficient and interpretable.</li>
+              
+              <li>
+                We propose a tokenized KAN block to effectively steer the KAN operators to be compatible with the exiting convolution-based designs.
+              </li>
+             
+              <li>
+              We empirically validate U-KAN on a wide range of medical segmentation benchmarks, achieving impressive accuracy and efficiency.
+              </li>
+              <li>
+              The application of U-KAN to existing diffusion models as an improved noise predictor demonstrates  its potential in backboning generative tasks and broader vision settings.
+              </li>
+
+
+            </ul>
+         
+          
+          </p>
+
+        <p class="text-center">
+          <!-- Reverse process of SyncDreamer's multiview diffusion. -->
+          <!-- Sampled realistic endoscopy videos by <i>Endora</i>.  -->
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
 
   <section>
     <div class="container">
@@ -209,9 +252,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-            <h2>Segmentation Results </h2>
+            <h2>Segmentation U-KAN </h2>
             <hr style="margin-top:0px">
-            <h3 class="new_h3"> Visual Results </h3>
+            <h3 class="new_h3"> Qualitative Results </h3>
             <img src="./pic/seg.jpg" alt="" width="1000" height="500">
             <h3 class="new_h3"> Quantitative Results </h3>
             <img src="./pic/res_1.png" alt="" width="800" height="250">
@@ -225,9 +268,9 @@
     <div class="container"> 
       <div class="row">
         <div class="col-12 text-center">
-            <h2>Generative Results</h2>
+            <h2>Diffusion U-KAN</h2>
             <hr style="margin-top:0px">
-            <h3 class="new_h3"> Visual Results </h3>
+            <h3 class="new_h3"> Qualitative Results </h3>
             <img src="./pic/gen.jpg" alt="" width="800" height="600">
             <h3 class="new_h3"> Quantitative Results </h3>
             <img src="./pic/res_2.png" alt="" width="800" height="200">
